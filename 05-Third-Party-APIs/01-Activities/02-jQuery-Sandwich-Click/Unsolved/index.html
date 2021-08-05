@@ -7,18 +7,53 @@
 
   <body>
     <h1>Click to Eat Sandwich</h1>
-    <!-- Create three button elements each with an id and corresponding content for our sandwiches -->
-
+        <!-- Create three button elements each with an id and corresponding content for our sandwiches -->
+      <button id="h">
+        Hamburger
+      </button>
+      <button id="c">
+        Cheeseburger
+      </button>
+      <button id="gc">
+        Grilled Cheese
+      </button>
     <!-- BONUS: Render an image for each click event. You will need to declare an empty `<div>` with an id of `#image-div` for this -->
 
     <!-- Link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script type="text/javascript">
-      // Create three global variables for tracking the number of sandwiches eaten
-      //
+      // Create three global variables for trackitng the number of sandwiches eaten
+    
       // YOUR CODE HERE
       //
+
+      let  h = 0;
+      let  c = 0;
+      let  gc = 0;
+
+      $('#h').on('click', function() {
+        alert('You Ate A Hamburger');
+        h++;
+        alert ('You Ate ' + h + ' Hamburgers')
+
+      });
+
+      $('#c').on('click', function() {
+        alert('You Ate A Cheeseburger');
+        c++;
+        alert ('You Ate ' + c + ' Cheeseburgers')
+
+        $('#img-div').html('<https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26231102%2F3757723.jpg&q=85/>')
+
+      });
+
+      $('#gc').on('click', function() {
+        alert('You Ate A Grilled Cheese');
+        gc++;
+        alert ('You Ate ' + gc + ' Grilled Cheeses')
+
+      });
 
       // Here we create various "on click" events which capture clicks
       // Inside each click event is the code to create an alert, update the counter, and show the updated count.
